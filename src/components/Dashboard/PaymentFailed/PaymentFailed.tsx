@@ -16,6 +16,7 @@ export default function PaymentFailed(){
     const plan = plans.find((plan :any)=> plan.id == params.id);
     const itemAmount = (plan?.price);
     const TotalAmount = Number(itemAmount ?? 0) ;
+    
     return (
         <Background
         width=" w-full "

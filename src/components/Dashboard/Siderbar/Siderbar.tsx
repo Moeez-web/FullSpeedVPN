@@ -88,7 +88,7 @@ const Sidebar = () => {
             } flex items-center space-x-2 hover:bg-white/10 px-2 py-3 rounded-xl cursor-pointer`}
           >
             <BiSolidMessageDots className="h-6 w-6" />
-            <Link href="/dashboard/feedback">User Feedback</Link>
+            <Link href="/dashboard/feedback">Support</Link>
           </li>
         </ul>
       </nav>

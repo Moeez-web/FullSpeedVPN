@@ -4,9 +4,10 @@ import paymentFailedIcon from "../../../imgs/paymentFailedIcon.png";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { FaArrowCircleRight, FaArrowRight } from "react-icons/fa";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import { useDashboard } from "@/context/dashboardContext";
+import { api } from "@/utils/Auth";
 
 export default function PaymentFailed(){
     const [loading, setLoading] = useState(false);
@@ -16,6 +17,23 @@ export default function PaymentFailed(){
     const plan = plans.find((plan :any)=> plan.id == params.id);
     const itemAmount = (plan?.price);
     const TotalAmount = Number(itemAmount ?? 0) ;
+    
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        setLoading(true);
+        api("/user_packages/payment_cancel")
+          .getExample(undefined, token)
+          .then((response: any) => {
+            console.log(response);
+            
+          })
+          .catch((error: any) => {
+            console.error("Error fetching invite code:", error);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+      }, []);
     
     return (
         <Background

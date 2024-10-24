@@ -12,13 +12,14 @@ interface IAuthContext{
 
  interface AuthProviderProp{
     children: ReactNode
+    
  }
 
 export const AuthProvider = ({children}: AuthProviderProp)=>{
     const router = useRouter();
     const [userData, setUserData] = useState();
     const [loading, setLoading] = useState(false);
-    useEffect(() => {
+    useEffect(() => {   
         setLoading((state)=>{ return !state });
         const token = localStorage.getItem('token');
         api('/user_details')

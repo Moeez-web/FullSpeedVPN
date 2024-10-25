@@ -20,17 +20,18 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
-import api from "../../../utils/Auth";
+import { api } from "../../../utils/Auth";
 import { v4 as uuidv4 } from 'uuid';
-import { useRouter } from 'next/navigation';import Loader from "@/components/ui/loader";
-;
+import { useRouter } from 'next/navigation';
+import Loader from "@/components/ui/loader";
+
 
 const OtpVerification = () => {
   const [otp, setOtp] = useState("");
   const [timeLeft, setTimeLeft] = useState(0);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-  const [email,setUserEmail] = useState(localStorage.getItem('email') ?? "");
+  const [email,setUserEmail] = useState("");
 
   const FormSchema = z.object({
     otp: z.string().min(6, {
@@ -110,7 +111,7 @@ const OtpVerification = () => {
         // router.push('/otp-verification'); // Redirect to OTP verification page
       })
       .catch((error) => console.error('Error:', error))
-      .finally(()=>{setLoading((state)=> {return !state});s});
+      .finally(()=>{setLoading((state)=> {return !state});});
   };
 
   return (
@@ -165,7 +166,7 @@ const OtpVerification = () => {
             ) : (
               <>
               <p className="text-gray-400 text-center mb-2 text-sm">
-              Don’t you receive any code
+              Dont you receive any code
             </p>
               <Link
                 href={"#"}

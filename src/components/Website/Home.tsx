@@ -156,7 +156,7 @@ export default function WebHome(){
       Enjoy fast and stable connection anywhere, anytime
     </h1>
     <p className="text-center mt-7 text-lg text-[#D2D3D6]">
-      The internet is slow and unbearable? Don't worry. Full-speed VPN currently supports over 3000 servers in 170 VPN server locations in 80 countries, and the number is still growing. This ensures that no matter where you are, you can always find a high-bandwidth and low-latency server nearby and enjoy the best network performance.
+      The internet is slow and unbearable? Dont worry. Full-speed VPN currently supports over 3000 servers in 170 VPN server locations in 80 countries, and the number is still growing. This ensures that no matter where you are, you can always find a high-bandwidth and low-latency server nearby and enjoy the best network performance.
     </p>
     <div className="mt-7">
       <Image src={worldWideLocation} alt="World Wide Location" width={1039} height={818} />

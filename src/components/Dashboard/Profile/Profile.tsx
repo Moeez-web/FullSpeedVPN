@@ -18,8 +18,8 @@ import { z } from "zod";
 import Background from "../shared/Background";
 import { FaUser } from "react-icons/fa";
 import { useEffect, useRef, useState } from "react";
-import { get } from "@/utils/ApiSetup";
-import { useAuth, useAuthContext } from "@/context/authContext";
+
+import {  useAuthContext } from "@/context/authContext";
 import { api } from "@/utils/Auth";
 import Loader from "@/components/ui/loader";
 

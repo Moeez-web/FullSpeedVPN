@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "../../ui/input";
 import {
@@ -46,8 +46,10 @@ const ResetPw = () => {
     },
   });
   const { setValue } = form;
-  const resetEmail = localStorage.getItem("resetEmail")
-setValue("email", resetEmail ?? "");
+  useEffect(() => {
+    const resetEmail = localStorage.getItem("resetEmail");
+    if (resetEmail) setValue("email", resetEmail);
+  }, [setValue]);
 
 function resetPassword(value:any ){
   setLoading(true);

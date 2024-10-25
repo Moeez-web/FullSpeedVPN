@@ -1,6 +1,6 @@
 import { DashboardProvider } from "@/context/dashboardContext"
 
-export const purchaseLayout = ({ children }: { children: React.ReactNode })=>{
+const purchaseLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     return (
         <DashboardProvider>
             {children}

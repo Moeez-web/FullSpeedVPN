@@ -25,8 +25,8 @@ export default function AboutUs(){
                 <div className="flex flex-col">
                     <div>
                         <h1 className="text-5xl font-semibold">About Us</h1>
-                        <p className="mt-7 text-lg text-[#D2D3D6] w-[515px]">At Full-Speed VPN, we are committed to providing the highest level of online privacy and security. Our mission is to empower users with the tools they need to browse the internet safely, privately, and freely. By using advanced encryption protocols, we protect your data from hackers, surveillance, and other online threats. Whether you're looking to secure your connection on public Wi-Fi or bypass geographic restrictions, we’ve got you covered.</p>
-                        <p className="text-xl font-semibold mt-7 w-[464px]" >The World's Only Community Supported Secure VPN Service.</p> 
+                        <p className="mt-7 text-lg text-[#D2D3D6] w-[515px]">At Full-Speed VPN, we are committed to providing the highest level of online privacy and security. Our mission is to empower users with the tools they need to browse the internet safely, privately, and freely. By using advanced encryption protocols, we protect your data from hackers, surveillance, and other online threats. Whether youre looking to secure your connection on public Wi-Fi or bypass geographic restrictions, we’ve got you covered.</p>
+                        <p className="text-xl font-semibold mt-7 w-[464px]" >The Worlds Only Community Supported Secure VPN Service.</p> 
                     </div>
                     <div className="flex flex-row mt-4 gap-3 flex-1 w-[385px]">
                         <div className="flex flex-col gap-2">
@@ -102,7 +102,7 @@ export default function AboutUs(){
             </div>
             <div>
                 <h1 className="font-semibold text-[28px]">Limitation of Liability</h1>
-                <p className="text-base text-[#A0A4AD] w-[1087px]">Full-Speed VPN is not liable for any indirect, incidental, or consequential damages arising from your use of our service. The VPN is provided on an "as-is" basis, and while we strive for perfection, we do not guarantee uninterrupted service.</p>
+                <p className="text-base text-[#A0A4AD] w-[1087px]">Full-Speed VPN is not liable for any indirect, incidental, or consequential damages arising from your use of our service. The VPN is provided on an as-is basis, and while we strive for perfection, we do not guarantee uninterrupted service.</p>
             </div>
             </div>
            
